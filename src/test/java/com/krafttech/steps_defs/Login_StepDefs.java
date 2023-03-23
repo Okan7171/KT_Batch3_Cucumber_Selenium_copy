@@ -31,4 +31,9 @@ public class Login_StepDefs {
         System.out.println("Enter valid credentials that belongs to Sebastian");
     }
 
+    @When("The user enters valid credentials that belongs to SDET")
+    public void the_user_enters_valid_credentials_that_belongs_to_SDET() {
+        System.out.println("Enter valid credentials that belongs to SDET");
+    }
+
 }
