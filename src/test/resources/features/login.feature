@@ -16,17 +16,17 @@ Feature: Login
   @student @krafttech @smoke
   Scenario:  Login as Jack
     Given The user is on the login page
-    When The user enters valid credentials that belongs to Jack
+    When The user enters valid credentials that belongs to Jhon
     Then The user should be able to login
 
   @developer @junior
   Scenario: Login as Sebastian
     Given The user is on the login page
-    When The user enters valid credentials that belongs to Sebastian
+    When The user enters valid credentials that belongs to Eddie Murphy
     Then The user should be able to login
 
   @SDET @smoke @junior @db
   Scenario: Login as SDET
     Given The user is on the login page
-    When The user enters valid credentials that belongs to SDET
+    When The user enters valid credentials that belongs to Morgan Freeman
     Then The user should be able to login
