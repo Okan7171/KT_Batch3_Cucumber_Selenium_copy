@@ -17,7 +17,6 @@ public class OverviewPage extends BasePage{
     }
 
     public void tapOnTab(String str){
-        //driver.findElement(By.xpath("//*[.='Alperen']));
         WebElement tab = Driver.get().findElement(By.xpath("//li/button[.='" + str + "']"));
         tab.click();
     }

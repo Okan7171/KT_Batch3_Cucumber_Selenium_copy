@@ -1,3 +1,4 @@
+@regression
 @login
 Feature: Login
   #As a user, I should be able to login with my valid credentials so that I

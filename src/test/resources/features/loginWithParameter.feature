@@ -1,3 +1,4 @@
+@regression
 @LoginWithParameter
 Feature: Log in as different user
 
@@ -12,7 +13,7 @@ Feature: Log in as different user
     When The user logs in using "john@gmail.com" and "John1234."
     Then The user should be able to login
     And The user name should be "John"
-
+  @smoke
   Scenario: Log in as Eddie with parameter
     Given The user is on the login page
     When The user logs in using "eddiem@kraft.com" and "eddiem12"
