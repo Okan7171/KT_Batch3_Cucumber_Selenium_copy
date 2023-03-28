@@ -8,9 +8,12 @@ Feature: Login
   #     2. User should not be able to login with invalid credentials.
   #     3. ...
   #     4. ...
+
+  Background:
+    Given The user is on the login page
+
   @teacher @krafttech @smoke
   Scenario: Login as Mike
-    Given The user is on the login page
     When The user enters valid credentials that belongs to Mike
     Then The user should be able to login
 
@@ -22,12 +25,10 @@ Feature: Login
 
   @developer @junior
   Scenario: Login as Sebastian
-    Given The user is on the login page
     When The user enters valid credentials that belongs to Eddie Murphy
     Then The user should be able to login
 
   @SDET @smoke @junior @db
   Scenario: Login as SDET
-    Given The user is on the login page
     When The user enters valid credentials that belongs to Morgan Freeman
     Then The user should be able to login

@@ -49,6 +49,10 @@ public abstract class BasePage {
         return Driver.get().findElement(By.xpath("//span[.='"+accountName+"']")).getText();
     }
 
+    public String getAccountName(){
+        return userAccountName.getText();
+    }
+
 }
 
 /**
