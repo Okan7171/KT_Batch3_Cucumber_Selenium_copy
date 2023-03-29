@@ -2,6 +2,7 @@ package com.krafttech.steps_defs;
 
 import com.krafttech.pages.DashboardPage;
 import com.krafttech.pages.LoginPage;
+import com.krafttech.utilities.BrowserUtils;
 import com.krafttech.utilities.ConfigurationReader;
 import com.krafttech.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -53,6 +54,7 @@ public class Login_StepDefs {
     @When("The user logs in using {string} and {string}")
     public void the_user_logs_in_using_and(String email, String password) {
         loginPage.login(email, password);
+        BrowserUtils.waitFor(3);
     }
 
 
@@ -61,5 +63,4 @@ public class Login_StepDefs {
         String actualUsername = dashboardPage.userAccountName.getText();
         Assert.assertEquals(expectedUsername,actualUsername);
     }
-
 }

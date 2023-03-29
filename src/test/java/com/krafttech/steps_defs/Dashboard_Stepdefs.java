@@ -4,6 +4,7 @@ import com.krafttech.pages.DashboardPage;
 import com.krafttech.pages.LoginPage;
 import com.krafttech.utilities.BrowserUtils;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 import java.util.List;
@@ -33,4 +34,31 @@ public class Dashboard_Stepdefs {
         Assert.assertEquals(expected,actual);
     }
 
+    @Then("Verify that {string} is visible on the dashboard")
+    public void verify_that_is_visible_on_the_dashboard(String name) {
+        DashboardPage dashboardPage = new DashboardPage();
+        String expectedName = name;
+        String actualName = dashboardPage.getAccountName();
+        Assert.assertEquals(expectedName,actualName);
+    }
+
+    @When("Go to {string} and {string}")
+    public void go_to_and(String tab, String module) {
+        DashboardPage dashboardPage = new DashboardPage();
+        dashboardPage.navigateToModule(tab, module);
+    }
+
+    @Then("Verify that {string} and {string} and {string}")
+    public void verify_that_and_and(String string, String string2, String string3) {
+        DashboardPage dashboardPage = new DashboardPage();
+        String expected1 = string;
+        String expected2 = string2;
+        String expected3 = string3;
+        String actual1 = dashboardPage.firstTitle.getText();
+        String actual2 = dashboardPage.secondTitle.getText();
+        String actual3 = dashboardPage.thirdTitle.getText();
+        Assert.assertEquals(expected1,actual1);
+        Assert.assertEquals(expected2,actual2);
+        Assert.assertEquals(expected3,actual3);
+    }
 }

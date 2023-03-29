@@ -17,7 +17,7 @@ Feature: Navigation Menu
     And The user navigates to Forms Input menu
     Then The user able to see General Form Elements - Input text
 
-  @smoke
+  @smoke @db
   Scenario: Navigation to My Profile menu
     When The user enters valid credentials that belongs to Mike
     Then The user should be able to see Dashboard text
