@@ -19,6 +19,8 @@ public class Dashboard_Stepdefs {
         List<String> actual = BrowserUtils.getElementsText(dashboardPage.menuList);
         Assert.assertEquals(expected,actual);
         BrowserUtils.waitFor(5);
+        System.out.println("tabNames = " + tabNames);
+        System.out.println("actual = " + actual);
     }
 
     @Then("Enter credentials and validate that user is on the home page")

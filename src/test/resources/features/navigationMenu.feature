@@ -3,7 +3,7 @@ Feature: Navigation Menu
 
   Background:
     Given The user is on the login page
-
+  @rerun
   Scenario: Navigation to Developers menu
     When The user enters valid credentials that belongs to Mike
     Then The user should be able to see Dashboard text

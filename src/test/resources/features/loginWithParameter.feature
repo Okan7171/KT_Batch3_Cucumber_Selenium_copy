@@ -1,5 +1,5 @@
 @regression
-@LoginWithParameter
+@LoginWithParameter @rerun
 Feature: Log in as different user
 
   Background:
